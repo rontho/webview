@@ -18,14 +18,14 @@ color: #000;
  }
  </style>
  <script type="text/javascript">
-  function showAndroidToast(toastmsg) {
-    Android.showToast(toastmsg);
+  function exitWebapp(toastmsg) {
+    androidBridge.exitWebapp();
    }
- function showAndroidDialog(dialogmsg) {
-      Android.showDialog(dialogmsg);
+ function getCameraAndReadFilePermission() {
+      androidBridge.getCameraAndReadFilePermission();
    }
   function moveToScreenTwo() {
-    Android.moveToNextScreen();
+    androidBridge.moveToNextScreen();
    }
  </script>
   </head>
@@ -39,8 +39,8 @@ color: #000;
    Here are few examples:
      </div>
   <div>
-       <input type="button" value="Make Toast" onClick="showAndroidToast('Toast made by Javascript')" /><br/>
-       <input type="button" value="Trigger Dialog" onClick="showAndroidDialog('This dialog is triggered by Javascript ')" /><br/>
+       <input type="button" value="Exit web app" onClick="exitWebapp()" /><br/>
+       <input type="button" value="Get permissions" onClick="getCameraAndReadFilePermission()" /><br/>
         <input type="button" value="Take me to Next Screen" onClick="moveToScreenTwo()" />
           </div>
       </center>
