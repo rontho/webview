@@ -21,14 +21,14 @@
   </style>
   <script type="text/javascript">
     function exitWebapp() {
-      if (webkit !== 'undefined' && webkit !== null) {
+      if (typeof webkit !== 'undefined' && webkit !== null) {
         webkit.messageHandlers.exitWebapp.postMessage({});
       } else {
         androidBridge.exitWebapp();
       }
     }
     function getCameraAndReadFilePermission() {
-      if (webkit !== undefined && webkit !== null) {
+      if (typeof webkit !== undefined && webkit !== null) {
         webkit.messageHandlers.getCameraAndReadFilePermission.postMessage({});
       } else {
         androidBridge.getCameraAndReadFilePermission();
