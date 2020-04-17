@@ -21,14 +21,14 @@
   </style>
   <script type="text/javascript">
     function exitWebapp() {
-      if (typeof webkit !== ‘undefined’ && webkit !== null) {
+      if (typeof webkit !== 'undefined' && webkit !== null) {
         webkit.messageHandlers.exitWebapp.postMessage({});
       } else {
         androidBridge.exitWebapp();
       }
     }
     function getCameraAndReadFilePermission() {
-      if (typeof webkit !== ‘undefined’ && webkit !== null) {
+      if (typeof webkit !== 'undefined' && webkit !== null) {
         webkit.messageHandlers.getCameraAndReadFilePermission.postMessage({});
       } else {
         androidBridge.getCameraAndReadFilePermission();
@@ -38,7 +38,7 @@
       alert("Permissions granted " + granted);
     }
     function openFeature(deeplink) {
-      if (typeof webkit !== ‘undefined’ && webkit !== null) {
+      if (typeof webkit !== 'undefined' && webkit !== null) {
         webkit.messageHandlers.openFeature.postMessage({});
       } else {
         androidBridge.openFeature(deeplink);
