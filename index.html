@@ -27,6 +27,9 @@ color: #fff;
   function setCameraAndReadFilePermission(granted) {
       alert("Permissions granted " + granted);
    }
+  function openFeature(deeplink) {
+      androidBridge.openFeature(deeplink);
+   }
  </script>
   </head>
   <body>
@@ -42,7 +45,7 @@ color: #fff;
        <input type="button" value="Exit web app" onClick="exitWebapp()" /><br/>
        <input type="button" value="Get permissions" onClick="getCameraAndReadFilePermission()" /><br/>
        <input type="button" value="Show permission alert" onClick="setCameraAndReadFilePermission(false)" /><br/>
-       <input type="button" value="Open Feature" onClick="openFeature(\"ad.dpn.link.card\")" /><br/>
+       <input type="button" value="Open Feature" onClick="openFeature('ad.dpn.link.card')" /><br/>
        <a href="https://youtu.be/c4D6EETkBNE">Open Youtube</a><br/>
        <a href="caisse-epargne://transfer">Open Transfer</a><br/>
        <a href="https://rontho.github.io/webview/index.md">Navigate inside website</a></br>
