@@ -44,11 +44,11 @@
         androidBridge.openFeature(deeplink);
       }
    }
-    function shareFile(deeplink) {
+    function shareFile(name, type, data) {
       if (typeof webkit !== 'undefined' && webkit !== null) {
         webkit.messageHandlers.openFeature.postMessage({});
       } else {
-        androidBridge.shareFeature(deeplink);
+        androidBridge.shareFile(name, type, data);
       }
    }
     function viewFile(deeplink) {
